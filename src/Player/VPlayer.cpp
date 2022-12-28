@@ -10,7 +10,7 @@
 
 namespace
 {
-	QMutex time;
+	QMutex videoTime;
 
 	class PixelBuffer : public ABuffer
 	{
@@ -184,11 +184,11 @@ namespace
 
 	void mid(const libvlc_event_t *, void *)
 	{
-		if (::time.tryLock()) {
+        if (::videoTime.tryLock()) {
 			QMetaObject::invokeMethod(lApp->findObject<APlayer>(),
 				"timeChanged",
 				Q_ARG(qint64, lApp->findObject<APlayer>()->getTime()));
-			::time.unlock();
+            ::videoTime.unlock();
 		}
 	}
 
@@ -391,19 +391,19 @@ void VPlayer::setTime(qint64 _time)
 				stop();
 			}
 		}
-		else{
-			::time.lock();
+        else{
+            ::videoTime.lock();
 			qApp->processEvents();
 			emit jumped(_time);
 			libvlc_media_player_set_time(mp, qBound<qint64>(0, _time, getDuration()));
-			::time.unlock();
+            ::videoTime.unlock();
 		}
 	}
 }
 
 qint64 VPlayer::getTime()
 {
-	return state == Stop ? -1 : libvlc_media_player_get_time(mp);
+    return state == Stop ? -1 : libvlc_media_player_get_time(mp);
 }
 
 void VPlayer::setMedia(QString file)

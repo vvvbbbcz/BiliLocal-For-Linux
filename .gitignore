@@ -1,5 +1,6 @@
 build-*
 .idea
+.deps
 *~
 *.o
 *.user
@@ -18,4 +19,5 @@ build-*
 *.ipch
 *.opendb
 *.db
+*.log
 bin
