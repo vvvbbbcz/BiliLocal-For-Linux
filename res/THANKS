@@ -1,10 +1,13 @@
-感谢以下人员对BiliLocal做出的贡献
+感谢以下人员对 BiliLocal 做出的贡献
+
+AncientLysine:
+程序开发
 
 Chaserhkj:
 搜索窗口
 界面结构调整
 
-那么开始零崎吧(zhengdanwei):
+那么开始零崎吧 (zhengdanwei):
 Mac OS版本编译
 弹幕发送功能
 
@@ -12,12 +15,15 @@ Mac OS版本编译
 测试
 使用说明
 
-hungkie(samlls):
+hungkie (samlls):
 阻止屏幕变暗或关闭
+
+自由的铁矿 (vvvbbbcz):
+GNU/Linux 版本移植
 
 BiliLocal使用了以下库和插件
 
-VLC - Copyright (C) 1998-2013 VLC authors and VideoLAN
-FFmpeg - Copyright (C) 2000-2013 the FFmpeg developers
-Qt5 - Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
-OpenSSL - Copyright (C) 1998-2013 The OpenSSL Project.
+VLC - Copyright (C) 1998-2022 VLC authors and VideoLAN
+FFmpeg - Copyright (C) 2000-2022 the FFmpeg developers
+Qt5 - Copyright (C) 2022 Digia Plc and/or its subsidiary(-ies).
+OpenSSL - Copyright (C) 1998-2022 The OpenSSL Project.
